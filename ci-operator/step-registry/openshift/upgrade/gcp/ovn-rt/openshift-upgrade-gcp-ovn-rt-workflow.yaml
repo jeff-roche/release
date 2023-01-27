@@ -7,9 +7,11 @@ workflow:
     - ref: ovn-conf
     - chain: ipi-install-stableinitial
     - ref: optional-operators-configure-realtime-tuned-profile
+    - ref: optional-operators-kdump-configure-logs
     test:
     - ref: openshift-e2e-test
     post:
+    - ref: optional-operators-kdump-gather-logs
     - chain: gather-network
     - chain: gather-core-dump
     - chain: ipi-gcp-post

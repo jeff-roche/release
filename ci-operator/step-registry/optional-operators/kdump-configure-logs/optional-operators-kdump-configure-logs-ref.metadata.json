@@ -1,0 +1,10 @@
+{
+	"path": "optional-operators/kdump-configure-logs/optional-operators-kdump-configure-logs-ref.yaml",
+	"owners": {
+		"approvers": [
+			"eggfoobar",
+			"jeff-roche",
+			"jerpeter1"
+		]
+	}
+}
