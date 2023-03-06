@@ -1,0 +1,10 @@
+{
+	"path": "openshift/upgrade/gcp/ovn-rt/tests/openshift-upgrade-gcp-ovn-rt-tests-chain.yaml",
+	"owners": {
+		"approvers": [
+			"eggfoobar",
+            "jeff-roche",
+            "jerpeter1"
+		]
+	}
+}

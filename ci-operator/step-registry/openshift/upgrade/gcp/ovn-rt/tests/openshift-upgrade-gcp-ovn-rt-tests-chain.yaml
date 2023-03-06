@@ -1,0 +1,7 @@
+chain:
+  as: openshift-upgrade-gcp-ovn-rt-tests
+  steps:
+  - ref: openshift-e2e-test
+  env:
+    TEST_TYPE: suite
+    TEST_SUITE: openshift/nodes/realtime

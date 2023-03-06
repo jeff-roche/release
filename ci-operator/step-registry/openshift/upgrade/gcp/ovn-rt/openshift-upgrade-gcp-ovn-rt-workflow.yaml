@@ -9,7 +9,9 @@ workflow:
     - ref: optional-operators-configure-realtime-tuned-profile
     - ref: optional-operators-kdump-configure-logs
     test:
-    - ref: openshift-e2e-test
+    - chain: openshift-upgrade-gcp-ovn-rt-tests
+    - chain: openshift-upgrade-gcp-ovn-rt-e2e
+    - chain: openshift-upgrade-gcp-ovn-rt-tests
     post:
     - ref: optional-operators-kdump-gather-logs
     - chain: gather-network
@@ -19,11 +21,9 @@ workflow:
       OPENSHIFT_INSTALL_RELEASE_IMAGE_OVERRIDE: "release:initial"
       OPENSHIFT_UPGRADE_RELEASE_IMAGE_OVERRIDE: "release:latest"
     env:
-      TEST_TYPE: upgrade
-      TEST_SUITE: ""
-      TEST_UPGRADE_OPTIONS: ""
       RT_ENABLED: "true"
       COMPUTE_NODE_TYPE: n2-standard-8
   documentation: |-
     The Openshift E2E GCP OVN Realtime Kernel workflow executes the upgrade end-to-end test suite on GCP with a default cluster
-    configuration and Loki as log collector, exercising an upgrade during the process.
+    configuration and Loki as log collector, exercising an upgrade during the process. The realtime test are run before and after
+    the upgrade to ensure conformance with realtime testing tools after the upgrade.

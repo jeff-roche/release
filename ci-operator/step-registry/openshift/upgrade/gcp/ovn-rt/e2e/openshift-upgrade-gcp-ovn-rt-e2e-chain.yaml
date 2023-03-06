@@ -1,0 +1,8 @@
+chain:
+  as: openshift-upgrade-gcp-ovn-rt-e2e
+  steps:
+  - ref: openshift-e2e-test
+  env:
+    TEST_TYPE: upgrade
+    TEST_SUITE: ""
+    TEST_UPGRADE_OPTIONS: ""

@@ -1,0 +1,10 @@
+{
+	"path": "openshift/upgrade/gcp/ovn-rt/e2e/openshift-upgrade-gcp-ovn-rt-e2e-chain.yaml",
+	"owners": {
+		"approvers": [
+			"eggfoobar",
+            "jeff-roche",
+            "jerpeter1"
+		]
+	}
+}
